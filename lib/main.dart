@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.all(10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // _isLoading
                 //     ? CircularProgressIndicator()
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white)),
-               const  SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 Align(
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.white),
                       child: Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: EdgeInsets.all(20),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -184,45 +184,43 @@ class _HomePageState extends State<HomePage> {
                                               )),
                                     ),
                             ),
-                       const      SizedBox(
+                            SizedBox(
                               height: 10,
                             ),
                             GestureDetector(
                                 onTap: () {
                                   _isLoading
-                                      ? const CircularProgressIndicator()
+                                      ? CircularProgressIndicator()
                                       : _submitImage();
                                 },
-                                child: Expanded(
-                                  child: Container(
-                                    padding: EdgeInsets.all(10),
-                                    width: double.infinity,
-                                    height: 40,
-                                    decoration: BoxDecoration(
-                                        color: const Color(4286622940),
-                                        borderRadius: BorderRadius.circular(8)),
-                                    child: Align(
-                                        alignment: Alignment.center,
-                                        child: _isLoading == false
-                                            ? _iserror == true
-                                                ? Text(
-                                                    safetyText,
-                                                    style: GoogleFonts.poppins(
-                                                        color: Colors.red,
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.w500),
-                                                  )
-                                                : Text(
-                                                    safetyText,
-                                                    style: GoogleFonts.poppins(
-                                                        color: Colors.white,
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.w500),
-                                                  )
-                                            : const CircularProgressIndicator()),
-                                  ),
+                                child: Container(
+                                  padding: EdgeInsets.all(10),
+                                  width: double.infinity,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: const Color(4286622940),
+                                      borderRadius: BorderRadius.circular(8)),
+                                  child: Align(
+                                      alignment: Alignment.center,
+                                      child: _isLoading == false
+                                          ? _iserror == true
+                                              ? Text(
+                                                  safetyText,
+                                                  style: GoogleFonts.poppins(
+                                                      color: Colors.red,
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                )
+                                              : Text(
+                                                  safetyText,
+                                                  style: GoogleFonts.poppins(
+                                                      color: Colors.white,
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                )
+                                          : const CircularProgressIndicator()),
                                 ))
                           ],
                         ),
@@ -247,16 +245,14 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Align(
                               alignment: Alignment.topLeft,
-                              child: Flexible(
-                                child: TextField(
-                                  controller: _textEditingController,
-                                  onChanged: (value) {
-                                    _checkProfanity();
-                                  },
-                                  decoration: const InputDecoration(
-                                    labelText:
-                                        'Enter text to check for profanity',
-                                  ),
+                              child: TextField(
+                                controller: _textEditingController,
+                                onChanged: (value) {
+                                  _checkProfanity();
+                                },
+                                decoration: const InputDecoration(
+                                  labelText:
+                                      'Enter text to check for profanity',
                                 ),
                               ),
                             ),
@@ -267,26 +263,24 @@ class _HomePageState extends State<HomePage> {
                                 onTap: () {
                                   _checkProfanity();
                                 },
-                                child: Expanded(
-                                  child: Container(
-                                    padding: EdgeInsets.all(10),
-                                    width: double.infinity,
-                                    height: 40,
-                                    decoration: BoxDecoration(
-                                        color: const Color(4286622940),
-                                        borderRadius: BorderRadius.circular(8)),
-                                    child: Align(
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          _isProfanity
-                                              ? 'Profanity Detected 🫢'
-                                              : 'Input is clean ✌️',
-                                          style: GoogleFonts.poppins(
-                                              color: Colors.white,
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w500),
-                                        )),
-                                  ),
+                                child: Container(
+                                  padding: EdgeInsets.all(10),
+                                  width: double.infinity,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: const Color(4286622940),
+                                      borderRadius: BorderRadius.circular(8)),
+                                  child: Align(
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        _isProfanity
+                                            ? 'Profanity Detected 🫢'
+                                            : 'Input is clean ✌️',
+                                        style: GoogleFonts.poppins(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500),
+                                      )),
                                 )),
                           ],
                         ),
