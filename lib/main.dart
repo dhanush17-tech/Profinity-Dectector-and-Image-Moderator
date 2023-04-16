@@ -189,7 +189,7 @@ class ProfanityCheckerPage extends StatelessWidget {
                                               alignment: Alignment.center,
                                               child: Text(
                                                 model.isProfanity
-                                                    ? "Profinatiy Detected !🫢"
+                                                    ? "Profanity Detected !🫢"
                                                     : "All Good ! ✌️",
                                                 style: GoogleFonts.poppins(
                                                     color: Colors.white,
