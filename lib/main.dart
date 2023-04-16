@@ -43,7 +43,7 @@ class ProfanityCheckerPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             const SizedBox(height: 20),
-                            Text("Profantiy Checker",
+                            Text("Profanity Checker",
                                 style: GoogleFonts.poppins(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
