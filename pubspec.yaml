@@ -37,7 +37,7 @@ dependencies:
   image_picker:
   google_fonts:
   dio:
-
+  provider:
 dev_dependencies:
   flutter_test:
     sdk: flutter
